@@ -1,0 +1,16 @@
+@import "../../assets/stylesheets/breakpoints";
+@import "../../assets/stylesheets/variables";
+
+.hero-banner {
+  width: 100%;
+  max-width: 24rem;
+
+  & > img {
+    width: 100%;
+    user-select: none;
+  }
+
+  @include breakpoint("medium") {
+    max-width: 35rem;
+  }
+}

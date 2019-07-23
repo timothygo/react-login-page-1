@@ -1,0 +1,124 @@
+@import "../../assets/stylesheets/breakpoints";
+@import "../../assets/stylesheets/variables";
+
+.signup-form {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-columns: 1fr;
+
+  &__header {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+
+    min-height: $header-height;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > a {
+      width: 100%;
+      max-width: 34rem;
+      text-align: center;
+
+      font-size: 1.3rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  &__main {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    &__message {
+      max-width: 34rem;
+      margin: 0.4rem 0rem 4rem 0rem;
+      font-size: 1.35rem;
+      color: $primary-light-color;
+      text-align: center;
+    }
+
+    &__form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__input {
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        max-width: 34rem;
+        margin-bottom: 3.3rem;
+      }
+
+      & > button {
+        width: 100%;
+        max-width: 34rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    &__agreement {
+      max-width: 34rem;
+      margin-top: 3rem;
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      text-align: center;
+      & > a {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include breakpoint("medium") {
+    &__header {
+      justify-content: flex-end;
+      & > a {
+        width: initial;
+        font-size: 1.1rem;
+        padding: 0.45rem 2.3rem 0.6rem 2.3rem;
+      }
+    }
+
+    &__main {
+      grid-row: 1/-1;
+      align-items: flex-start;
+
+      &__message {
+        margin: 0.4rem 0rem 3.2rem 0rem;
+        text-align: left;
+      }
+
+      &__form {
+        align-items: flex-start;
+
+        &__input {
+          margin-bottom: 2.5rem;
+        }
+
+        & > button {
+          width: initial;
+          margin-top: 1rem;
+        }
+      }
+      &__agreement {
+        text-align: left;
+      }
+    }
+  }
+}
