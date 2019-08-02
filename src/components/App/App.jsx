@@ -40,7 +40,7 @@ const App = () => {
           </span>
           <span>
             Created by{" "}
-            <a href="#" target="blank">
+            <a href="https://www.timothygo.me" target="blank">
               Timothy Go
             </a>
           </span>
